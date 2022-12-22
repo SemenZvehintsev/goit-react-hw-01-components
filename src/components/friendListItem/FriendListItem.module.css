@@ -1,6 +1,36 @@
 .isOnline {
+    height: 25px;
+    width: 25px;
     background-color: green;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
+    display: inline-block;
+}
+
+.isOffline {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(168,166,168,1);
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.avatar {
+    max-height: 100%;
+    border-radius: 10px;
 }

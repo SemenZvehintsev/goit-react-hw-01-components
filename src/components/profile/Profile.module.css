@@ -6,6 +6,7 @@
     border-radius: 10px;
     text-align: center;
     padding: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(168,166,168,1);
 }
 
 .description {

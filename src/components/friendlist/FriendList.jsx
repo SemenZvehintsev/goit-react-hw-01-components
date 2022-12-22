@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from '../friendListItem/FriendListItem'
-// import styles from '../friendList/FriendList.module.css'
+import styles from '../friendList/FriendList.module.css'
 
 export const FriendList = ({friends}) => {
-    return <ul className="friend-list">
+    return <ul className={styles.friendList}>
         {friends.map((friend) => <FriendListItem key={friend.id} avatar={friend.avatar} name={friend.name} status={friend.isOnline}/>)}
   </ul>
 }
 
 FriendList.propTypes = {
-   friend: PropTypes.arrayOf(PropTypes.object)
+   friend: PropTypes.arrayOf(PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    status: PropTypes.bool.isRequired
+ }))
 }
