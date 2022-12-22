@@ -4,7 +4,7 @@ import { FriendList } from "./friendlist/FriendList";
 import user from './datafiles/user.json';
 import data from './datafiles/data.json';
 import friends from './datafiles/friends.json';
-import transactions from './datafiles/transactions.json';
+// import transactions from './datafiles/transactions.json';
 
 export const App = () => {
   return (
