@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import styles from 'components/transactions/Transactions.module.css'
+import styles from 'components/Transactions/Transactions.module.css'
 
 export const TransactionHistory = ({items}) => {
-    console.log(items)
     return <table className={styles.transactionHistory}>
         <thead>
         <tr>
@@ -13,14 +12,14 @@ export const TransactionHistory = ({items}) => {
         </thead>
     
         <tbody>
-            {items.map((transaction) => {
+            {items.map(({id, type, amount, currency}) => {
             const capitalizedType =
-            transaction.type.charAt(0).toUpperCase()
-            + transaction.type.slice(1)
-            return <tr key={transaction.id}>
+            type.charAt(0).toUpperCase()
+            + type.slice(1);
+            return <tr key={id}>
                 <td>{capitalizedType}</td>
-                <td>{transaction.amount}</td>
-                <td>{transaction.currency}</td>
+                <td>{amount}</td>
+                <td>{currency}</td>
             </tr>}
             )}
         </tbody>
